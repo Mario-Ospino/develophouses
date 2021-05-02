@@ -1,0 +1,39 @@
+// el slide padre
+ion-slides {
+    background-color: var(--ion-color-dark);
+    height: 100%;
+    max-width: 800px; 
+  }
+  
+  //slide hijos
+  .swiper-slide{
+     display: block;
+     margin-bottom: 64px;
+     background-color: var(--ion-color-light);
+  }
+  
+  //componentes iguales entre slides
+  
+  ion-slide > ion-icon[name="close"]{
+    float: right;
+    color: var(--ion-color-primary);
+    font-size: 48px;
+  }
+  
+  ion-slide > img[alt="Development House Logo"]{
+    width: 300px;
+    padding-top: 15%;
+    margin-left: 8%;
+  }
+  
+  
+  // para los div que tienen los mensajes
+  .div-info{
+    margin-top: 10%;
+    padding:0%  10%;
+    text-align: left;
+  }
+  
+  #div-specific-dates > h4 {
+    font-weight: bold;
+  }

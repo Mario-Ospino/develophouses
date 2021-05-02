@@ -1,0 +1,64 @@
+<ion-content>
+  <figure text-center>
+    <img src="assets/img/logo.png" alt="Development House Logo" />
+  </figure>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Login <h6>{{errorMessage}}</h6></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+        <ion-item id="email-item">
+          <ion-label>Email</ion-label>
+          <ion-input
+            formControlName="email"
+            placeholder="info@developmenthouse.com"
+          ></ion-input>
+        </ion-item>
+        <div class="validation-error">
+          <ng-container *ngFor="let validation of validation_messages.email">
+            <div
+              *ngIf="loginForm.get('email').hasError(validation.type) && 
+            loginForm.get('email').dirty "
+            >
+              {{validation.message}}
+            </div>
+          </ng-container>
+        </div>
+        <ion-item>
+          <ion-label>Password</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+        <div class="validation-error">
+          <ng-container *ngFor="let validation of validation_messages.password">
+            <div
+              *ngIf="loginForm.get('password').hasError(validation.type) && 
+            loginForm.get('password').dirty "
+            >
+              {{validation.message}}
+            </div>
+          </ng-container>
+        </div>
+        <div id="hypertexts">
+          <ul>
+            <li><a>Create an account</a></li>
+            <li><a>Forgot your password?</a></li>
+          </ul>
+        </div>
+
+        <ion-button
+          color="secondary"
+          expand="block"
+          [disabled]="!loginForm.valid"
+          type="submit"
+          >Login</ion-button
+        >
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer text-center>
+  <h6>
+    Development House © 2021 || <a><strong>Privacy policy</strong></a>
+  </h6>
+</ion-footer>

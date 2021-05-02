@@ -1,0 +1,56 @@
+//propiedades similares
+ion-card , ion-card-title {
+    color: var(--ion-color-light);
+}
+
+//card de login
+ion-card{
+    margin-top: 60px;
+    margin: auto;
+    height:400px;
+    width: auto;
+    max-width: 400px;
+    --background : var(--ion-color-dark);
+}
+
+//para los items
+ion-item{
+    margin-top: 10px;
+}
+#email-item{
+    margin-top: 20px;
+}
+#hypertexts{
+    --background: var(--ion-color-dark);
+    padding: 0%;
+    width: 60%;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+}
+#hypertexts > ul {
+    padding: 0%;
+    margin: 0%;
+}
+#hypertexts > ul > li {
+    list-style: none;
+    text-align: center;
+}
+#hypertexts > ul > li> a {
+    color: var(--ion-color-light);
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+//boton
+ion-button{
+    margin-top: 40px; 
+}
+
+//footer
+
+ion-footer{
+    color: var(--ion-color-light);
+    background: var(--ion-color-dark);
+    text-align: center;
+}
